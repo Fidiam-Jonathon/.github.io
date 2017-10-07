@@ -1,0 +1,15 @@
+#blank_p {
+background-color: lightBlue;
+}
+.button{
+  background-color: darkblue;
+  color: white;
+  border-radius: 8px;
+  border: none;
+  font-family: monospace;
+  font-size: 150%;
+  padding: 5px 5px 5px 5px;
+}
+.button:hover{
+  cursor: pointer;
+}

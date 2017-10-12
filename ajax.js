@@ -29,23 +29,22 @@ function pickStory() {
 
 function getStoryPartOne() {
   let xml = new XMLHttpRequest();
-  xml.open("GET", "story1.txt", true);
-  xml.send();
   xml.onReadyStateChange = function() {
     if (this.readyState == 4 && this.status == 200) {
       document.getElementById("story").innerHTML = this.responseText;
-    };
-  }
-
+    }
+  };
+  xml.open("GET", "story1.txt");
+  xml.send();
 }
 
 function getStoryPartTwo() {
   let xml = new XMLHttpRequest();
-  xml.open('GET', 'story2.txt', true);
-  xml.send();
   xml.onReadyStateChange = function() {
     if (this.readyState == 4 && this.status == 200) {
       document.getElementById("story").innerHTML = this.responseText;
-    };
-  }
+    }
+  };
+  xml.open('GET', 'story2.txt');
+  xml.send();
 }

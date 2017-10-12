@@ -1,32 +1,14 @@
 <html>
-<button id="ajaxButton" type="button">Make a request</button>
-
-<script>
-(function() {
-  var httpRequest;
-  document.getElementById("ajaxButton").addEventListener('click', makeRequest);
-
-  function makeRequest() {
-    httpRequest = new XMLHttpRequest();
-
-    if (!httpRequest) {
-      alert('ERROR: cannot create httpRequest');
-      return false;
-    }
-    httpRequest.onreadystatechange = alertContents;
-    httpRequest.open('GET', 'ajaxtest.html');
-    httpRequest.send();
-  }
-
-  function alertContents() {
-    if (httpRequest.readyState === XMLHttpRequest.DONE) {
-      if (httpRequest.status === 200) {
-        alert(httpRequest.responseText);
-      } else {
-        alert('There was a problem with the request.');
-      }
-    }
-  }
-})();
-</script>
+<head>
+  <title> locaiton by IP </title>
+  <meta charset="utf-8">
+</head>
+<body>
+  <h1 id="heading">Hello, my name is Smoothie</h1>
+  <br>
+  <img src="smoothie.jpg" height="250" width="auto" id="pic" alt="cute doggy">
+  <div id="story"></div>
+<button id="ajaxButton" type="button">Learn about Smoothie</button>
+<script src="ajax.js"></script>
+</body>
 </html>

@@ -23,44 +23,8 @@
 
 @keyframes makeSmall {
   0% {
-    height: 121px;
-    width: 156px;
-  }
-  10% {
-    height: 110px;
-    width: 145px;
-  }
-  20% {
-    height: 100px;
-    width: 132px;
-  }
-  30% {
-    height: 90px;
-    width: 120px;
-  }
-  40% {
-    height: 72px;
-    width: 97px;
-  }
-  50% {
-    height: 79px;
-    width: 107px;
-  }
-  60% {
-    height: 66px;
-    width: 88px;
-  }
-  70% {
-    height: 60px;
-    width: 80px;
-  }
-  80% {
-    height: 53px;
-    width: 68px;
-  }
-  90% {
-    height: 48px;
-    width: 62px;
+    height: 432px;
+    width: 560px;
   }
   100% {
     height: 43px;

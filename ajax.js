@@ -1,5 +1,6 @@
 let button = document.getElementById("ajaxButton");
-
+let xml1 = null;
+let xml2 = null;
 let count = 0;
 button.addEventListener("click", pickStory);
 
@@ -14,6 +15,7 @@ function pickStory() {
       let pic = document.getElementById("pic").src = "floyd.jpg";
       document.getElementById("heading").innerHTML = "Hello, my name is Floyd";
       document.getElementById("story").innerHTML = "I'm much better than that other guy!";
+      document.getElementById("ajaxButton").innerHTML= "Learn about Floyd";
       count++;
       break;
     case 2:
@@ -28,23 +30,25 @@ function pickStory() {
 }
 
 function getStoryPartOne() {
-  let xml = new XMLHttpRequest();
-  xml.onReadyStateChange = function() {
-    if (this.readyState == 4 && this.status == 200) {
-      document.getElementById("story").innerHTML = this.responseText;
-    }
-  };
-  xml.open("GET", "story1.txt");
-  xml.send();
+  xml1 = new XMLHttpRequest();
+  xml1.onload = putStoryOne;
+  xml1.open("GET", "story1.txt", true);
+  xml1.send();
+}
+
+function putStoryOne() {
+  document.getElementById("story").innerHTML = xml1.responseText;
+  console.log(xml1.responseText);
 }
 
 function getStoryPartTwo() {
-  let xml = new XMLHttpRequest();
-  xml.onReadyStateChange = function() {
-    if (this.readyState == 4 && this.status == 200) {
-      document.getElementById("story").innerHTML = this.responseText;
-    }
-  };
-  xml.open('GET', 'story2.txt');
-  xml.send();
+  xml2 = new XMLHttpRequest();
+  xml2.onload = putStoryTwo;
+  xml2.open('GET', 'story2.txt', true);
+  xml2.send();
+}
+
+function putStoryTwo() {
+  document.getElementById("story").innerHTML = xml2.responseText;
+  console.log(xml2.responseText);
 }

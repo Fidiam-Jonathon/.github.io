@@ -1,14 +1,17 @@
+let btn = document.getElementById("drawButton");
+btn.addEventListener("click", draw);
+
 function draw() {
-  let canvas = document.getElementById("canvas");
-  var ctx = canvas.getContext('2d');
+  var canvas = document.getElementById('canvas');
+  if (canvas.getContext) {
+    let ctx = canvas.getContext('2d');
 
-  ctx.beginPath();
-  ctx.moveTo(50, 0);
-  ctx.lineTo(100, 0);
-  ctx.lineTo(75, 75);
-  ctx.closePath();
-  ctx.stroke();
-
-
+    // Tri-Force 1st triangle
+    ctx.beginPath();
+    ctx.moveTo(25, 50);
+    ctx.lineTo(100, Math.random() * 10);
+    ctx.lineTo(Math.random() * 50, 150);
+    ctx.lineTo(25, 50);
+    ctx.stroke();
+  }
 }
-draw();

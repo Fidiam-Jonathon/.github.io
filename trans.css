@@ -37,6 +37,9 @@
    margin: 10px;
    }
 
+   #pic{
+     display: inline-block;
+   }
    #pic:hover img{
      transform: scale(1.2);
    }

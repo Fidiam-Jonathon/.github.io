@@ -1,0 +1,12 @@
+#animate{
+background-color: yellow;
+width: 100px;
+height: 100px;
+position: absolute;
+}
+#container{
+  background-color: blue;
+  position: relative;
+  width: 400px;
+  height: 400px;
+}

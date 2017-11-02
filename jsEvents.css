@@ -1,0 +1,15 @@
+.slideIn{
+  animation-name: slideIn;
+  animation-duration: 3s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
+}
+
+@@keyframes slideIn {
+  from{
+    left: 880px;
+  }
+  to{
+    left: 400px;
+  }
+}

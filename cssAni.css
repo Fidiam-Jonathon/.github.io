@@ -1,0 +1,22 @@
+button {
+animation-name: pulse;
+animation-duration: 1s;
+animation-iteration-count: infinite;
+
+animation-direction: alternate;
+background-color: lightBlue;
+border-radius: 3px;
+}
+button:hover{
+  cursor: pointer;
+}
+
+@keyframes pulse {
+  from {
+    border: 1px solid lightBlue;
+  }
+
+  to {
+    border: 5px solid lightBlue;
+  }
+}

@@ -5,7 +5,7 @@ let count = 0;
 button.addEventListener("click", pickStory);
 
 
-function pickStory() {
+function storyForward() {
   switch (count) {
     case 0:
       getStoryPartOne();

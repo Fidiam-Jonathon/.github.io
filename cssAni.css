@@ -1,3 +1,11 @@
+html{
+  box-sizing: border-box;
+}
+
+*, *:before, *:after{
+  box-sizing: inherit;
+}
+
 button {
 animation-name: pulse;
 animation-duration: 1s;
@@ -20,6 +28,7 @@ button:hover{
     border: 5px solid lightBlue;
   }
 }
+
 
 body {
   padding: 100px;
